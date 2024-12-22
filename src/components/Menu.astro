@@ -1,0 +1,19 @@
+---
+import MenuList from "./MenuList.vue"
+---
+
+<section id="menu" class="flex flex-col gap-8 px-8 items-center py-24">
+    <div
+        class="flex flex-col items-center justify-center max-w-5xl text-center gap-6"
+    >
+        <h1 class="text-4xl font-bold">Daftar Menu</h1>
+        <p>
+            Nikmati sensasi hidangan spesial dari Menu Basah Kedai Rizky,
+            yang diracik dengan cita rasa otentik dan dijamin bikin lidah
+            bergoyang! Semua makanan dimasak fresh berdasarkan <a href="">Pre Order</a>,
+            sehingga kualitas dan kesegarannya selalu terjaga.
+        </p>
+    </div>
+
+    <MenuList client:load />
+</section>

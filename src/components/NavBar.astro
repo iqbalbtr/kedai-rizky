@@ -1,0 +1,76 @@
+<script>
+    document.querySelector("body")?.addEventListener("scroll", (e) => {
+        const nav = document.querySelector("nav");
+        console.log(nav?.scrollTop);
+    });
+
+    let isActive = false;
+
+    const navBtn = document.querySelectorAll("#nav-btn");
+
+    const sidebar = document.querySelector("#sidebar");
+
+    if (navBtn && sidebar) {
+        navBtn.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                isActive = !isActive;
+
+                if (isActive) {
+                    sidebar.classList.add("translate-x-0");
+                    sidebar.classList.remove("translate-x-full");
+                } else {
+                    sidebar.classList.add("translate-x-full");
+                    sidebar.classList.remove("translate-x-0");
+                }
+            });
+        });
+    }
+</script>
+
+<nav
+    class="flex top-0 left-0 w-full backdrop-blur-lg shadow-md fixed justify-between py-6 px-12"
+>
+    <div>
+        <h1 class="font-bold text-xl">
+            Kedai <span class="text-accent">Rizky</span>
+        </h1>
+    </div>
+
+    <div class="md:flex hidden gap-4 items-center font-medium">
+        <a href="#hero">Home</a>
+        <a href="#about">tentang</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Pemesanan</a>
+        <a href="#location">Lokasi</a>
+    </div>
+
+    <div class="md:hidden">
+        <button id="nav-btn">Click</button>
+
+        <div
+            id="sidebar"
+            class="h-screen transition translate-x-full w-full fixed top-0 right-0 bg-primary"
+        >
+            <button id="nav-btn"> Click </button>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#hero">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">tentang</a>
+                    </li>
+                    <li>
+                        <a href="#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#location">Lokasi</a>
+                    </li>
+                    <li>
+                        <a href="#order">Pemesanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

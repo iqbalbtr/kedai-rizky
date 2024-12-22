@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: 'Fredoka';
+        font-style: normal;
+        src: url("/font/fredoka.ttf") format("ttf");
+    }
+
+    html {
+        font-family: 'Fredoka', sans-serif;
+    }
+}
+
+:root {
+    --primary-color: #f97316;
+    --accent-color: #ea580c;
+    --secondary-color: #facc15;
+    --foreign-color: #fef08a;
+    --background-color: #fef08a;
+}
