@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css"
+import "../styles/global.css";
 import NavBar from "../components/NavBar.astro";
 ---
 
@@ -15,6 +15,26 @@ import NavBar from "../components/NavBar.astro";
 	<body>
 		<NavBar />
 		<slot />
+
+		<aside class="fixed bottom-6 z-10 p-2 bg-foreign rounded-full right-6">
+			<a class="text-green-600" href="https://api.whatsapp.com/send?phone=6285741269660&text=Halo%2C%20saya%20ingin%20memesan.">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="40"
+					height="40"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-message-circle-more"
+					><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path><path
+						d="M8 12h.01"></path><path d="M12 12h.01"></path><path
+						d="M16 12h.01"></path></svg
+				>
+			</a>
+		</aside>
 	</body>
 </html>
 

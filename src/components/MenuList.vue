@@ -8,28 +8,28 @@ const menus = ref([
         category: "Kue Basah",
         items: [
             {
-                image: "https://example.com/images/lemper.jpg",
+                image: "/images/hero/lemper.webp",
                 label: "Lemper",
                 description:
                     "Kue basah berisi ayam suwir yang dibungkus daun pisang.",
                 link: "https://example.com/lemper",
             },
             {
-                image: "https://example.com/images/arem-arem.jpg",
+                image: "/images/hero/arem-arem.jpg",
                 label: "Arem-Arem",
                 description:
                     "Kue basah berbentuk lonjong berisi isian seperti ayam atau sambal goreng.",
                 link: "https://example.com/arem-arem",
             },
             {
-                image: "https://example.com/images/nagasari.jpg",
+                image: "/images/hero/nagasari-bandung.jpg",
                 label: "Nagasari Bandung",
                 description:
                     "Kue basah khas Bandung berisi pisang dan terbuat dari tepung beras.",
                 link: "https://example.com/nagasari-bandung",
             },
             {
-                image: "https://example.com/images/martabak-mini.jpg",
+                image: "/images/hero/martabak-mini.jpg",
                 label: "Martabak Mini",
                 description:
                     "Martabak manis dengan ukuran kecil dan beragam topping.",
@@ -41,28 +41,28 @@ const menus = ref([
         category: "Roti",
         items: [
             {
-                image: "https://example.com/images/donat.jpg",
+                image: "/images/hero/donat.jpeg",
                 label: "Donat",
                 description:
                     "Roti berbentuk cincin dengan aneka topping atau taburan gula.",
                 link: "https://example.com/donat",
             },
             {
-                image: "https://example.com/images/bolu.jpg",
+                image: "/images/hero/bolu.jpg",
                 label: "Bolu",
                 description:
                     "Roti manis yang lembut dan cocok untuk berbagai acara.",
                 link: "https://example.com/bolu",
             },
             {
-                image: "https://example.com/images/bolu-zebra.jpg",
+                image: "/images/hero/bolu-zebra.webp",
                 label: "Bolu Zebra",
                 description:
                     "Bolu dengan motif zebra dari adonan cokelat dan vanilla.",
                 link: "https://example.com/bolu-zebra",
             },
             {
-                image: "https://example.com/images/bolu-kukus.jpg",
+                image: "/images/hero/bolu-kukus.jpg",
                 label: "Bolu Kukus",
                 description:
                     "Bolu yang dikukus sehingga memiliki tekstur lembut dan mekar.",
@@ -74,21 +74,21 @@ const menus = ref([
         category: "Gorengan",
         items: [
             {
-                image: "https://example.com/images/sosis-solo.jpg",
+                image: "/images/hero/sosis-solo.jpg",
                 label: "Sosis Solo",
                 description:
                     "Sosis khas Solo yang diisi daging dan dibalut kulit tipis.",
                 link: "https://example.com/sosis-solo",
             },
             {
-                image: "https://example.com/images/risol-mayo.jpg",
+                image: "/images/hero/risol-mayo.jpg",
                 label: "Risol Mayo",
                 description:
                     "Gorengan dengan isi mayones, sosis, dan telur yang creamy.",
                 link: "https://example.com/risol-mayo",
             },
             {
-                image: "https://example.com/images/risol-ragout.jpg",
+                image: "/images/hero/risol-ragout.jpg",
                 label: "Risol Ragout",
                 description:
                     "Risol dengan isian ragout sayur atau daging yang gurih.",
@@ -108,10 +108,10 @@ const menus = ref([
             @click="selected = category.category"
             :id="category.category"
             :class="{
-                'border-b-2 border-secondary': selected === category.category,
+                'border-b-2 border-secondary text-accent': selected === category.category,
                 'border-b-2 border-transparent': selected !== category.category,
             }"
-            class="px-4 py-2 text-sn md:text-base"
+            class="px-4 py-2 font-semibold text-sn md:text-base"
         >
             <h3>{{ category.category }}</h3>
         </button>
@@ -126,7 +126,7 @@ const menus = ref([
             <img
                 :src="item.image"
                 :alt="item.label"
-                class="aspect-square w-[100px] md:w-[150px] rounded-full bg-slate-400"
+                class="aspect-square w-[100px] md:w-[150px] object-cover outline outline-accent outline-offset-4 rounded-full bg-slate-400"
             />
             <h1 class="text-lg text-center font-bold mt-2">{{ item.label }}</h1>
             <p class="md:text-sm text-xs text-gray-600 text-center">{{ item.description }}</p>

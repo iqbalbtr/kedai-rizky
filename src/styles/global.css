@@ -11,13 +11,15 @@
 
  * {
         font-family: 'Fredoka', sans-serif;
+        scroll-behavior: smooth;
     }
+
 }
 
 :root {
-    --primary-color: #f97316;
-    --accent-color: #ea580c;
-    --secondary-color: #facc15;
+    --primary-color: #FAB12F;
+    --accent-color: #FA4032;
+    --secondary-color: #FA812F;
     --foreign-color: #fef08a;
-    --background-color: #fef08a;
+    --background-color: #FEF3E2;
 }
