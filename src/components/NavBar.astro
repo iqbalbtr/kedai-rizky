@@ -7,8 +7,17 @@
     let isActive = false;
 
     const navBtn = document.querySelectorAll("#nav-btn");
+    const linkBtn = document.querySelectorAll("#link-btn");
 
     const sidebar = document.querySelector("#sidebar");
+
+    linkBtn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            isActive = false;
+            sidebar?.classList.add("translate-x-full");
+            sidebar?.classList.remove("translate-x-0");
+        });
+    });
 
     if (navBtn && sidebar) {
         navBtn.forEach((btn) => {
@@ -28,10 +37,10 @@
 </script>
 
 <nav
-    class="flex top-0 left-0 w-full backdrop-blur-lg shadow-md fixed justify-between py-6 px-12"
+    class="flex top-0 left-0 w-full backdrop-blur-lg shadow-md fixed justify-between py-3 md:py-6 px-6 md:px-12"
 >
     <div>
-        <h1 class="font-bold text-xl">
+        <h1 class="font-bold text-base md:text-xl">
             Kedai <span class="text-accent">Rizky</span>
         </h1>
     </div>
@@ -45,29 +54,70 @@
     </div>
 
     <div class="md:hidden">
-        <button id="nav-btn">Click</button>
+        <button id="nav-btn">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-menu"
+                ><line x1="4" x2="20" y1="12" y2="12"></line><line
+                    x1="4"
+                    x2="20"
+                    y1="6"
+                    y2="6"></line><line x1="4" x2="20" y1="18" y2="18"
+                ></line></svg
+            >
+        </button>
 
         <div
             id="sidebar"
-            class="h-screen transition translate-x-full w-full fixed top-0 right-0 bg-primary"
+            class="h-screen transition flex flex-col items-end translate-x-full w-full fixed top-0 right-0 bg-primary"
         >
-            <button id="nav-btn"> Click </button>
-            <div>
-                <ul>
+            <button id="nav-btn" class="m-8">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-menu"
+                    ><line x1="4" x2="20" y1="12" y2="12"></line><line
+                        x1="4"
+                        x2="20"
+                        y1="6"
+                        y2="6"></line><line x1="4" x2="20" y1="18" y2="18"
+                    ></line></svg
+                >
+            </button>
+
+            <hr />
+
+            <div class="flex flex-col text-white gap-6 text-xl font-semibold p-8">
+                <ul class="text-right space-y-6">
                     <li>
-                        <a href="#hero">Home</a>
+                        <a id="link-btn" href="#hero">Home</a>
                     </li>
                     <li>
-                        <a href="#about">tentang</a>
+                        <a id="link-btn" href="#about">tentang</a>
                     </li>
                     <li>
-                        <a href="#menu">Menu</a>
+                        <a id="link-btn" href="#menu">Menu</a>
                     </li>
                     <li>
-                        <a href="#location">Lokasi</a>
+                        <a id="link-btn" href="#location">Lokasi</a>
                     </li>
                     <li>
-                        <a href="#order">Pemesanan</a>
+                        <a id="link-btn" href="#order">Pemesanan</a>
                     </li>
                 </ul>
             </div>

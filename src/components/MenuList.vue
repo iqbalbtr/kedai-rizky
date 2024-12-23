@@ -101,7 +101,7 @@ const menus = ref([
 </script>
 
 <template>
-    <div class="flex gap-3 mt-14">
+    <div class="flex gap-1 md:gap-3 mt-14">
         <button
             v-for="category in menus"
             :key="category.category"
@@ -111,7 +111,7 @@ const menus = ref([
                 'border-b-2 border-secondary': selected === category.category,
                 'border-b-2 border-transparent': selected !== category.category,
             }"
-            class="px-4 py-2"
+            class="px-4 py-2 text-sn md:text-base"
         >
             <h3>{{ category.category }}</h3>
         </button>
@@ -121,15 +121,15 @@ const menus = ref([
         <div
             v-for="item in menus.find((menu) => menu.category === selected)?.items"
             :key="item.label"
-            class="max-w-[200px] flex flex-col justify-center items-center"
+            class="max-w-[100px] md:max-w-[200px] flex flex-col justify-center items-center"
         >
             <img
                 :src="item.image"
                 :alt="item.label"
-                class="aspect-square w-[150px] rounded-full bg-slate-400"
+                class="aspect-square w-[100px] md:w-[150px] rounded-full bg-slate-400"
             />
-            <h1 class="text-lg font-bold mt-2">{{ item.label }}</h1>
-            <p class="text-sm text-gray-600 text-center">{{ item.description }}</p>
+            <h1 class="text-lg text-center font-bold mt-2">{{ item.label }}</h1>
+            <p class="md:text-sm text-xs text-gray-600 text-center">{{ item.description }}</p>
         </div>
     </div>
 </template>

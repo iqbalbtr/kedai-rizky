@@ -9,6 +9,9 @@ export default {
 				secondary: 'var(--secondary-color)',
 				foreign: 'var(--foreign-color)',
 				background: 'var(--background-color)',
+			},
+			fontFamily: {
+				fredoka : "'Fredoka', Poppins"
 			}
 		},
 	},

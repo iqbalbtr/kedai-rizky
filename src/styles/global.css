@@ -9,7 +9,7 @@
         src: url("/font/fredoka.ttf") format("ttf");
     }
 
-    html {
+ * {
         font-family: 'Fredoka', sans-serif;
     }
 }
