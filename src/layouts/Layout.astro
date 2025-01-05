@@ -1,23 +1,65 @@
 ---
 import "../styles/global.css";
 import NavBar from "../components/NavBar.astro";
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Kedai Rizky</title>
+		<SEO
+			title={"Kedai Rizqy"}
+			description={"Kedai Rizqy adalah usaha katering rumahan yang menghadirkan pengalaman kuliner terbaik dengan menu-menu spesial yang dimasak Fresh setiap hari. Kami menggunakan bahan-bahan berkualitas tinggi ntuk menciptakan hidangan lezat dan menggugah selera."}
+			openGraph={{
+				basic: {
+					title: "Kedai Rizqy",
+					image: "/images/logo.png",
+					type: "website",
+					url: "https://kedai-rizqy.vercel.app",
+				}
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "@kedai__rizqy",
+				creator: "@kedai__rizqy",
+				title: "Kedai Rizqy",
+				description:
+					"Kedai Rizqy adalah usaha katering rumahan yang menghadirkan pengalaman kuliner terbaik dengan menu-menu spesial yang dimasak Fresh setiap hari.",
+				image: "/images/logo.png",
+			}}
+			extend={{
+				link: [
+					{
+						rel: "icon",
+						type: "image/svg+xml",
+						href: "/favicon.ico",
+					},
+				],
+				meta: [
+					{
+						name: "keywords",
+						content: "katering, makanan, kedai rizqy, kue",
+					},
+					{ name: "author", content: "Kedai Rizqy" },
+					{ property: "og:image", content: "/images/logo.png" },
+					{
+						property: "og:url",
+						content: "https://kedai-rizqy.vercel.app",
+					},
+					{ property: "og:locale", content: "id_ID" },
+				],
+			}}
+		/>
 	</head>
 	<body>
 		<NavBar />
 		<slot />
 
 		<aside class="fixed bottom-6 z-10 p-2 bg-foreign rounded-full right-6">
-			<a class="text-green-600" href="https://api.whatsapp.com/send?phone=6285741269660&text=Halo%2C%20saya%20ingin%20memesan.">
+			<a
+				class="text-green-600"
+				href="https://api.whatsapp.com/send?phone=6285741269660&text=Halo%2C%20saya%20ingin%20memesan."
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="40"

@@ -6,15 +6,20 @@
     @font-face {
         font-family: 'Fredoka';
         font-style: normal;
-        src: url("/font/fredoka.ttf") format("ttf");
+        src: url('/font/fredoka.ttf');
     }
 
  * {
         font-family: 'Fredoka', sans-serif;
         scroll-behavior: smooth;
     }
-
+    
 }
+
+* {
+       font-family: 'Fredoka', sans-serif;
+       scroll-behavior: smooth;
+   }
 
 :root {
     --primary-color: #FAB12F;
